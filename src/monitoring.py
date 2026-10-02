@@ -41,6 +41,7 @@ def main():
 
     recommended = recommendations.count("Recommend Intervention")
     not_recommended = recommendations.count("No Intervention")
+    recommendation_rate = (recommended / total_predictions) * 100
 
     report = f"""
 MDS-02 UPLIFT MODELING PLATFORM
@@ -55,6 +56,7 @@ Maximum Estimated Uplift: {max_uplift:.4f}
 
 Recommend Intervention: {recommended}
 No Intervention: {not_recommended}
+Recommendation Rate: {recommendation_rate:.2f}%
 """
 
     OUTPUT_FILE.parent.mkdir(exist_ok=True)

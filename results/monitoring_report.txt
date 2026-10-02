@@ -1,7 +1,7 @@
 
 MDS-02 UPLIFT MODELING PLATFORM
 Prediction Monitoring Report
-Generated: 2026-10-02T17:46:37.430508
+Generated: 2026-10-02T18:19:30.163255
 
 Total Predictions: 14
 
@@ -11,3 +11,4 @@ Maximum Estimated Uplift: 6.2474
 
 Recommend Intervention: 11
 No Intervention: 3
+Recommendation Rate: 78.57%
