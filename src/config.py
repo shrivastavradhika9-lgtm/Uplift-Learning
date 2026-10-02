@@ -1,0 +1,5 @@
+PROJECT_NAME = "MDS-02 Uplift Modeling Platform"
+
+RANDOM_STATE = 42
+
+UPLIFT_THRESHOLD = 5.0629

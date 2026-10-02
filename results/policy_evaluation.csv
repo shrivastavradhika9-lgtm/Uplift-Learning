@@ -1,0 +1,6 @@
+policy,target_percentage,predicted_policy_value
+Treat Nobody,0,11.100343333333333
+Treat Everyone,100,15.411587833333334
+Target Top 10%,10,11.7221485
+Target Top 25%,25,12.525972833333332
+Target Top 50%,50,13.695612666666669

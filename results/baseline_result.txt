@@ -1,0 +1,10 @@
+MDS-02 Uplift Modeling Platform
+Baseline Treatment Effect
+
+Control Average Outcome: 11.14
+Treatment Average Outcome: 15.32
+Baseline Treatment Effect: 4.18
+
+Interpretation:
+The treatment group has a higher average outcome than the control
+group by 4.18 points in the simulated dataset.
