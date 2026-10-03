@@ -43,6 +43,20 @@ def main():
     not_recommended = recommendations.count("No Intervention")
     recommendation_rate = (recommended / total_predictions) * 100
 
+    # New monitoring metric
+    recommended_uplifts = [
+        r["estimated_uplift"]
+        for r in records
+        if r["recommendation"] == "Recommend Intervention"
+    ]
+
+    if recommended_uplifts:
+        avg_recommended_uplift = (
+            sum(recommended_uplifts) / len(recommended_uplifts)
+        )
+    else:
+        avg_recommended_uplift = 0
+
     report = f"""
 MDS-02 UPLIFT MODELING PLATFORM
 Prediction Monitoring Report
@@ -57,6 +71,8 @@ Maximum Estimated Uplift: {max_uplift:.4f}
 Recommend Intervention: {recommended}
 No Intervention: {not_recommended}
 Recommendation Rate: {recommendation_rate:.2f}%
+
+Average Uplift of Recommended Learners: {avg_recommended_uplift:.4f}
 """
 
     OUTPUT_FILE.parent.mkdir(exist_ok=True)
