@@ -1536,5 +1536,24 @@ The current results demonstrate the technical workflow and experimental methodol
 
 Before real-world deployment, the system would require appropriate stakeholder review, independent validation, privacy assessment, fairness assessment, security review and prospective evaluation.
 
+## Explainability
 
+The system uses model feature importance as a predictive explainability method.
 
+The current feature-importance analysis identifies which input variables contribute most to the model's predictions. It should not be interpreted as evidence of causal importance or as proof that changing a feature will directly change the learner's outcome.
+
+Feature importance results are stored in `results/feature_importance.csv`.
+
+This distinction is important because the platform is designed for uplift-based intervention decisions, where predictive relationships and causal treatment effects are different concepts.
+
+## Error Analysis and Limitations
+
+The uplift model was evaluated by comparing estimated treatment effects with the known treatment-effect structure available in the simulated dataset.
+
+The T-Learner produced an estimated mean uplift of approximately 4.30 points, while the known average treatment effect in the simulated data was approximately 4.30 points.
+
+The correlation between estimated and known treatment effects was approximately 0.41, indicating that the model captures part of the heterogeneous treatment-effect pattern but does not perfectly rank individual learners.
+
+The Qini evaluation also showed that uplift ranking performance can vary on the test split. Therefore, individual intervention recommendations should not be interpreted as certain causal effects.
+
+These results highlight the limitations of the current simulated-data experiment and support the need for validation on real treatment-control data before operational use.
